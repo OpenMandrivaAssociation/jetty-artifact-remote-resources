@@ -10,6 +10,9 @@ Source0:        https://github.com/jetty/jetty.toolchain/archive/refs/tags/%{nam
 Source1:        jetty-artifact-remote-resources.rpmlintrc
 BuildArch:      noarch
 BuildRequires:	python
+# Literal, so the first rpmbuild -bs records them before sysjar is installed.
+BuildRequires:	maven
+BuildRequires:	java-current-devel
 BuildSystem:	maven
 
 Source2:        https://www.apache.org/licenses/LICENSE-2.0.txt
